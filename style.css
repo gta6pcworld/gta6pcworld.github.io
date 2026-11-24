@@ -498,3 +498,76 @@ button {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* 12. GTA VI WORLD SECTION */
+
+.world-section {
+  padding: 100px 20px;
+  background: #FFFFFF;
+}
+
+.world-heading {
+  max-width: 720px;
+  margin: 0 auto 55px;
+  text-align: center;
+}
+
+.world-heading h2 {
+  font-size: clamp(30px, 4vw, 42px);
+  color: var(--dark);
+  line-height: 1.2;
+  margin: 12px 0 18px;
+}
+
+.world-heading p {
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.world-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+}
+
+.world-card {
+  background: #F7F7FB;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 35px 28px;
+  transition: 0.3s ease;
+}
+
+.world-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+  border-color: var(--purple);
+}
+
+.world-icon {
+  font-size: 36px;
+  margin-bottom: 22px;
+}
+
+.world-card h3 {
+  font-size: 21px;
+  color: var(--dark);
+  margin-bottom: 12px;
+}
+
+.world-card p {
+  font-size: 15px;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+@media (max-width: 767px) {
+  .world-section {
+    padding: 65px 20px;
+  }
+
+  .world-grid {
+    grid-template-columns: 1fr;
+  }
+}
