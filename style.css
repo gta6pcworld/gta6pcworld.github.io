@@ -571,3 +571,110 @@ button {
     grid-template-columns: 1fr;
   }
 }
+
+/* GTA VI WORLD SECTION - DESIGN FIX */
+
+.world-section {
+  width: 100%;
+  padding: 100px 20px;
+  background: #ffffff;
+  box-sizing: border-box;
+}
+
+.world-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.world-heading {
+  max-width: 750px;
+  margin: 0 auto 55px;
+  text-align: center;
+}
+
+.world-heading .section-label {
+  display: block;
+  margin-bottom: 15px;
+}
+
+.world-heading h2 {
+  font-size: clamp(30px, 4vw, 42px);
+  color: #191a20;
+  line-height: 1.2;
+  margin: 12px 0 18px;
+}
+
+.world-heading p {
+  color: #666b78;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.world-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+}
+
+.world-card {
+  background: #f7f8fc;
+  border: 1px solid #e5e7ef;
+  border-radius: 16px;
+  padding: 35px 28px;
+  min-height: 230px;
+  box-sizing: border-box;
+  transition: transform 0.3s ease,
+              box-shadow 0.3s ease;
+}
+
+.world-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+.world-icon {
+  font-size: 38px;
+  margin-bottom: 22px;
+}
+
+.world-card h3 {
+  font-size: 21px;
+  color: #191a20;
+  margin: 0 0 12px;
+}
+
+.world-card p {
+  font-size: 15px;
+  color: #666b78;
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+  .world-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+  .world-section {
+    padding: 65px 20px;
+  }
+
+  .world-heading {
+    margin-bottom: 35px;
+  }
+
+  .world-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .world-card {
+    min-height: auto;
+  }
+}
