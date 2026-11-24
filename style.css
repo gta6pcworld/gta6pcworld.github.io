@@ -1466,3 +1466,194 @@ button {
   }
 
 }
+
+
+/* =========================================
+   17. GTA VI PC INFORMATION SECTION
+========================================= */
+
+.pc-info-section {
+  padding: 100px 20px;
+  background: #F7F7FB;
+}
+
+.pc-info-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* SECTION HEADING */
+
+.pc-info-heading {
+  max-width: 850px;
+  margin: 0 auto 60px;
+  text-align: center;
+}
+
+.pc-info-heading .section-label {
+  display: block;
+  color: #9333EA;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+}
+
+.pc-info-heading h2 {
+  color: #191A20;
+  font-size: clamp(30px, 4vw, 46px);
+  line-height: 1.2;
+  margin: 0 0 18px;
+}
+
+.pc-info-heading p {
+  color: #666B78;
+  font-size: 17px;
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* INFORMATION GRID */
+
+.pc-info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+  align-items: stretch;
+}
+
+/* INFORMATION CARDS */
+
+.pc-info-card {
+  position: relative;
+  min-width: 0;
+  padding: 35px 28px;
+  background: #FFFFFF;
+  border: 1px solid #E8E5EF;
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(20, 20, 40, 0.04);
+  transition: transform 0.35s ease,
+              box-shadow 0.35s ease;
+}
+
+.pc-info-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 16px 35px rgba(20, 20, 40, 0.10);
+}
+
+/* ICON */
+
+.pc-info-icon {
+  width: 65px;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #F2E8FF;
+  border-radius: 16px;
+  font-size: 30px;
+  margin-bottom: 28px;
+}
+
+/* CARD NUMBER */
+
+.pc-info-number {
+  position: absolute;
+  top: 30px;
+  right: 28px;
+  color: #E6D5FA;
+  font-size: 35px;
+  font-weight: 800;
+}
+
+/* CATEGORY */
+
+.pc-info-category {
+  display: block;
+  color: #9333EA;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin-bottom: 13px;
+}
+
+/* CARD HEADING */
+
+.pc-info-card h3 {
+  color: #191A20;
+  font-size: 22px;
+  line-height: 1.4;
+  margin: 0 0 14px;
+}
+
+/* CARD DESCRIPTION */
+
+.pc-info-card p {
+  color: #666B78;
+  font-size: 15px;
+  line-height: 1.8;
+  margin: 0 0 25px;
+}
+
+/* LINKS */
+
+.pc-info-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: #9333EA;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: gap 0.3s ease;
+}
+
+.pc-info-link:hover {
+  gap: 15px;
+}
+
+.pc-info-link span {
+  font-size: 19px;
+}
+
+.pc-info-coming-soon {
+  color: #88818F;
+  cursor: default;
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+  .pc-info-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .pc-info-section {
+    padding: 80px 20px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+  .pc-info-section {
+    padding: 65px 20px;
+  }
+
+  .pc-info-heading {
+    margin-bottom: 38px;
+  }
+
+  .pc-info-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .pc-info-card {
+    padding: 28px 24px;
+  }
+
+  .pc-info-card h3 {
+    font-size: 21px;
+  }
+}
