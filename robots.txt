@@ -2,4 +2,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://gta6pcworld.github.io/gta-vi-website/sitemap.xml
+Sitemap: https://gta6pcworld.github.io/sitemap.xml
