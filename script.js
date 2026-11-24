@@ -115,3 +115,88 @@ document.addEventListener("DOMContentLoaded", () => {
   console.log("GTA VI PC website initialized successfully.");
 
 });
+
+
+/* =========================================
+   20. RESPONSIVE MOBILE NAVIGATION
+========================================= */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  const menuToggle = document.querySelector(
+    ".mobile-menu-toggle"
+  );
+
+  const primaryNav = document.querySelector(
+    "#primary-navigation"
+  );
+
+  if (!menuToggle || !primaryNav) return;
+
+  function closeMenu() {
+    primaryNav.classList.remove("is-open");
+    menuToggle.classList.remove("is-active");
+
+    menuToggle.setAttribute(
+      "aria-expanded",
+      "false"
+    );
+
+    menuToggle.setAttribute(
+      "aria-label",
+      "Open navigation menu"
+    );
+  }
+
+  menuToggle.addEventListener("click", function () {
+
+    const isOpen = primaryNav.classList.toggle("is-open");
+
+    menuToggle.classList.toggle(
+      "is-active",
+      isOpen
+    );
+
+    menuToggle.setAttribute(
+      "aria-expanded",
+      String(isOpen)
+    );
+
+    menuToggle.setAttribute(
+      "aria-label",
+      isOpen
+        ? "Close navigation menu"
+        : "Open navigation menu"
+    );
+
+  });
+
+  // Close menu after clicking a navigation link
+
+  primaryNav.querySelectorAll("a").forEach(function (link) {
+
+    link.addEventListener("click", closeMenu);
+
+  });
+
+  // Close menu with Escape key
+
+  document.addEventListener("keydown", function (event) {
+
+    if (event.key === "Escape") {
+      closeMenu();
+    }
+
+  });
+
+  // Close menu when returning to desktop layout
+
+  window.addEventListener("resize", function () {
+
+    if (window.innerWidth > 700) {
+      closeMenu();
+    }
+
+  });
+
+});
