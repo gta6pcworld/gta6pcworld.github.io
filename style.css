@@ -1657,3 +1657,143 @@ button {
     font-size: 21px;
   }
 }
+
+
+/* =========================================
+   18. PROFESSIONAL WEBSITE FOOTER
+========================================= */
+
+.site-footer {
+  background: #17171F;
+  color: #FFFFFF;
+  padding: 75px 30px 25px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 50px;
+  padding-bottom: 55px;
+}
+
+/* BRAND */
+
+.footer-logo {
+  display: inline-block;
+  color: #FFFFFF;
+  font-size: 28px;
+  font-weight: 800;
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+
+.footer-logo span {
+  color: #A855F7;
+}
+
+.footer-brand p {
+  max-width: 300px;
+  color: #A5A5B2;
+  font-size: 14px;
+  line-height: 1.9;
+  margin-bottom: 24px;
+}
+
+.footer-tagline {
+  color: #A855F7;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  line-height: 1.8;
+}
+
+/* FOOTER COLUMNS */
+
+.footer-column h3 {
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 700;
+  margin: 5px 0 23px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column li {
+  margin-bottom: 15px;
+}
+
+.footer-column a {
+  color: #A5A5B2;
+  font-size: 14px;
+  text-decoration: none;
+  transition: color 0.3s ease,
+              padding-left 0.3s ease;
+}
+
+.footer-column a:hover {
+  color: #C084FC;
+  padding-left: 5px;
+}
+
+/* FOOTER BOTTOM */
+
+.footer-bottom {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 25px;
+  border-top: 1px solid #353541;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-bottom p {
+  color: #898997;
+  font-size: 12px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+
+  .footer-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 40px;
+  }
+
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+  .site-footer {
+    padding: 55px 22px 25px;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding-bottom: 35px;
+  }
+
+  .footer-brand p {
+    max-width: 100%;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+}
