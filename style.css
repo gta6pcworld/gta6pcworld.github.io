@@ -2026,3 +2026,15 @@ button {
 .mobile-menu-toggle.is-active span:nth-child(3) {
   transform: translateY(-7px) rotate(-45deg);
 }
+
+.character-card-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.character-card-link:focus-visible {
+  outline: 3px solid #9333ff;
+  outline-offset: 5px;
+  border-radius: 16px;
+}
