@@ -1797,3 +1797,217 @@ button {
   }
 
 }
+
+
+/* =========================================
+   19. PREMIUM RESPONSIVE HEADER
+========================================= */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid #EEEEF3;
+  box-shadow: 0 4px 20px rgba(20, 20, 40, 0.04);
+}
+
+.header-inner {
+  max-width: 1300px;
+  min-height: 82px;
+  margin: 0 auto;
+  padding: 0 35px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+/* LOGO */
+
+.brand-logo {
+  flex-shrink: 0;
+  color: #191A20;
+  font-size: 27px;
+  font-weight: 850;
+  letter-spacing: -1px;
+  text-decoration: none;
+}
+
+.brand-logo span {
+  color: #9333EA;
+}
+
+/* DESKTOP NAVIGATION */
+
+.primary-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+}
+
+.nav-link {
+  position: relative;
+  color: #42424D;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 10px 0;
+  transition: color 0.3s ease;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 3px;
+  width: 0;
+  height: 2px;
+  background: #9333EA;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #9333EA;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* HEADER ACTIONS */
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.header-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 15px 24px;
+  border-radius: 8px;
+  background: #191A20;
+  color: #FFFFFF;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.3s ease,
+              transform 0.3s ease;
+}
+
+.header-cta:hover {
+  background: #9333EA;
+  transform: translateY(-2px);
+}
+
+.header-cta span {
+  font-size: 19px;
+}
+
+/* MOBILE MENU BUTTON */
+
+.mobile-menu-toggle {
+  display: none;
+  width: 44px;
+  height: 44px;
+  padding: 10px;
+  background: #F4F0FA;
+  border: 1px solid #E9D5FF;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.mobile-menu-toggle span {
+  display: block;
+  width: 21px;
+  height: 2px;
+  margin: 5px auto;
+  background: #191A20;
+  border-radius: 3px;
+  transition: transform 0.3s ease,
+              opacity 0.3s ease;
+}
+
+/* TABLET */
+
+@media (max-width: 950px) {
+
+  .header-inner {
+    padding: 0 22px;
+    gap: 18px;
+  }
+
+  .primary-nav {
+    gap: 18px;
+  }
+
+  .nav-link {
+    font-size: 13px;
+  }
+
+  .header-cta {
+    padding: 13px 17px;
+  }
+
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+  .header-inner {
+    min-height: 72px;
+    padding: 0 18px;
+  }
+
+  .brand-logo {
+    font-size: 24px;
+  }
+
+  .mobile-menu-toggle {
+    display: block;
+  }
+
+  .primary-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background: #FFFFFF;
+    border-top: 1px solid #EEEEF3;
+    box-shadow: 0 12px 20px rgba(20, 20, 40, 0.08);
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+
+  .primary-nav.is-open {
+    display: flex;
+  }
+
+  .nav-link {
+    display: block;
+    padding: 13px 10px;
+    font-size: 15px;
+  }
+
+  .nav-link::after {
+    display: none;
+  }
+
+  .header-cta {
+    padding: 12px 15px;
+    font-size: 12px;
+  }
+
+}
