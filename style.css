@@ -1265,3 +1265,204 @@ button {
   }
 }
 
+
+/* =========================================
+   16. GTA VI GAMING NEWS SECTION
+========================================= */
+
+.news-section {
+  padding: 100px 20px;
+  background: #FFFFFF;
+}
+
+.news-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* SECTION HEADING */
+
+.news-heading {
+  max-width: 850px;
+  margin: 0 auto 60px;
+  text-align: center;
+}
+
+.news-heading .section-label {
+  display: block;
+  color: #9333EA;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  margin-bottom: 16px;
+}
+
+.news-heading h2 {
+  color: #191A20;
+  font-size: clamp(30px, 4vw, 46px);
+  line-height: 1.2;
+  margin: 0 0 18px;
+}
+
+.news-heading p {
+  color: #666B78;
+  font-size: 17px;
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* NEWS GRID */
+
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 26px;
+  align-items: stretch;
+}
+
+/* NEWS CARD */
+
+.news-card {
+  background: #FFFFFF;
+  border: 1px solid #E7E7ED;
+  border-radius: 18px;
+  overflow: hidden;
+  min-width: 0;
+  box-shadow: 0 8px 25px rgba(20, 20, 40, 0.05);
+  transition: transform 0.35s ease,
+              box-shadow 0.35s ease;
+}
+
+.news-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 16px 35px rgba(20, 20, 40, 0.12);
+}
+
+/* NEWS IMAGES */
+
+.news-image {
+  width: 100%;
+  height: 230px;
+  overflow: hidden;
+  background: #F0EDF5;
+}
+
+.news-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.5s ease;
+}
+
+.news-card:hover .news-image img {
+  transform: scale(1.06);
+}
+
+/* NEWS CONTENT */
+
+.news-content {
+  padding: 27px;
+}
+
+.news-category {
+  display: inline-block;
+  color: #9333EA;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.7px;
+  margin-bottom: 15px;
+}
+
+.news-content h3 {
+  color: #191A20;
+  font-size: 22px;
+  line-height: 1.4;
+  margin: 0 0 13px;
+}
+
+.news-content p {
+  color: #666B78;
+  font-size: 15px;
+  line-height: 1.8;
+  margin: 0 0 22px;
+}
+
+/* READ MORE LINKS */
+
+.news-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #9333EA;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: gap 0.3s ease,
+              color 0.3s ease;
+}
+
+.news-link:hover {
+  color: #6B21A8;
+  gap: 15px;
+}
+
+.news-link span {
+  font-size: 20px;
+}
+
+.news-coming-soon {
+  color: #77717F;
+  cursor: default;
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+
+  .news-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .news-section {
+    padding: 80px 20px;
+  }
+
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+  .news-section {
+    padding: 65px 20px;
+  }
+
+  .news-heading {
+    margin-bottom: 38px;
+  }
+
+  .news-heading p {
+    font-size: 15px;
+  }
+
+  .news-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .news-image {
+    height: 220px;
+  }
+
+  .news-content {
+    padding: 23px;
+  }
+
+  .news-content h3 {
+    font-size: 21px;
+  }
+
+}
