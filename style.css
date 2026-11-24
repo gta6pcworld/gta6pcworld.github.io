@@ -678,3 +678,124 @@ button {
     min-height: auto;
   }
 }
+
+/* 13. GTA VI CHARACTERS SECTION */
+
+.characters-section {
+  padding: 100px 20px;
+  background: #F4F5F9;
+  box-sizing: border-box;
+}
+
+.characters-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.characters-heading {
+  text-align: center;
+  max-width: 750px;
+  margin: 0 auto 55px;
+}
+
+.characters-heading h2 {
+  color: #191A20;
+  font-size: clamp(30px, 4vw, 42px);
+  margin: 15px 0;
+}
+
+.characters-heading p {
+  color: #666B78;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.characters-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+}
+
+.character-card {
+  min-height: 310px;
+  padding: 30px;
+  border-radius: 18px;
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  transition: transform 0.3s ease;
+}
+
+.character-card:hover {
+  transform: translateY(-7px);
+}
+
+.lucia-card {
+  background: linear-gradient(
+    145deg, #813D91, #E66C94 55%, #321D48
+  );
+}
+
+.jason-card {
+  background: linear-gradient(
+    145deg, #265C78, #4396A2 55%, #172C42
+  );
+}
+
+.cast-card {
+  background: linear-gradient(
+    145deg, #31313D, #68617E 55%, #211C31
+  );
+}
+
+.character-number {
+  position: absolute;
+  top: 22px;
+  right: 25px;
+  font-size: 55px;
+  font-weight: 800;
+  opacity: 0.3;
+}
+
+.character-tag {
+  font-size: 11px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.character-card h3 {
+  font-size: 27px;
+  margin: 0 0 12px;
+}
+
+.character-card p {
+  font-size: 14px;
+  line-height: 1.8;
+  color: rgba(255,255,255,0.88);
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .characters-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .characters-section {
+    padding: 65px 20px;
+  }
+
+  .characters-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .character-card {
+    min-height: 270px;
+  }
+}
