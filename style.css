@@ -876,3 +876,204 @@ button {
   }
 }
 
+/* 14. GTA VI LOCATIONS SECTION */
+
+.locations-section {
+  padding: 100px 20px;
+  background: #FFFFFF;
+  box-sizing: border-box;
+}
+
+.locations-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* SECTION HEADING */
+
+.locations-heading {
+  max-width: 850px;
+  margin: 0 auto 65px;
+  text-align: center;
+}
+
+.locations-heading .section-label {
+  display: block;
+  color: #A020F0;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  margin-bottom: 18px;
+}
+
+.locations-heading h2 {
+  color: #191A20;
+  font-size: clamp(32px, 4vw, 46px);
+  line-height: 1.2;
+  margin: 0 0 18px;
+}
+
+.locations-heading p {
+  color: #666B78;
+  font-size: 17px;
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* LOCATION GRID */
+
+.locations-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+/* LOCATION CARDS */
+
+.location-card {
+  position: relative;
+  min-height: 480px;
+  border-radius: 22px;
+  overflow: hidden;
+  isolation: isolate;
+  background: #17131E;
+  display: flex;
+  align-items: flex-end;
+  transition: transform 0.35s ease;
+}
+
+.location-card > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
+  transition: transform 0.6s ease;
+}
+
+/* DARK IMAGE OVERLAY */
+
+.location-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    to top,
+    rgba(12, 9, 20, 0.97) 0%,
+    rgba(12, 9, 20, 0.75) 35%,
+    rgba(12, 9, 20, 0.15) 75%,
+    rgba(12, 9, 20, 0.02) 100%
+  );
+}
+
+/* LOCATION TEXT */
+
+.location-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding: 30px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+}
+
+.location-label {
+  display: block;
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.location-content h3 {
+  color: #FFFFFF;
+  font-size: 30px;
+  margin: 0 0 16px;
+}
+
+.location-content p {
+  color: rgba(255,255,255,0.92);
+  font-size: 15px;
+  line-height: 1.8;
+  max-width: 85%;
+  margin: 0;
+}
+
+/* CIRCULAR ARROW */
+
+.location-arrow {
+  position: absolute;
+  right: 28px;
+  bottom: 35px;
+  width: 54px;
+  height: 54px;
+  border: 2px solid #C36BFF;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  font-size: 29px;
+  transition: background 0.3s ease;
+}
+
+.location-card:hover .location-arrow {
+  background: #9333EA;
+}
+
+/* HOVER EFFECT */
+
+.location-card:hover {
+  transform: translateY(-7px);
+}
+
+.location-card:hover > img {
+  transform: scale(1.07);
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+  .locations-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+  .locations-section {
+    padding: 65px 20px;
+  }
+
+  .locations-heading {
+    margin-bottom: 38px;
+  }
+
+  .locations-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .location-card {
+    min-height: 430px;
+  }
+
+  .location-content {
+    padding: 24px;
+  }
+
+  .location-content h3 {
+    font-size: 26px;
+  }
+
+  .location-content p {
+    max-width: 80%;
+    font-size: 14px;
+  }
+}
+
