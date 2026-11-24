@@ -1,0 +1,392 @@
+
+/* =========================================
+   GTA VI PC WEBSITE
+   Main Stylesheet
+========================================= */
+
+/* 01. CSS VARIABLES */
+:root {
+  --primary-bg: #F4F6FA;
+  --white: #FFFFFF;
+  --dark: #17191F;
+  --text: #333333;
+  --muted: #666666;
+  --purple: #8B35FF;
+  --pink: #FF4D9D;
+  --border: #E5E7EB;
+
+  --container: 1200px;
+  --radius: 12px;
+  --transition: 0.3s ease;
+}
+
+/* 02. GLOBAL RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--primary-bg);
+  color: var(--text);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font: inherit;
+}
+
+.container {
+  width: min(100% - 40px, var(--container));
+  margin-inline: auto;
+}
+
+/* 03. NAVIGATION */
+.site-header {
+  width: 100%;
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar {
+  max-width: 1280px;
+  min-height: 80px;
+  margin: auto;
+  padding: 0 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--dark);
+  letter-spacing: -1px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+  list-style: none;
+}
+
+.nav-links a {
+  color: var(--dark);
+  font-size: 15px;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.nav-links a:hover {
+  color: var(--purple);
+}
+
+.nav-button,
+.primary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 25px;
+
+  background: var(--dark);
+  color: var(--white);
+
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border-radius: 5px;
+
+  transition: var(--transition);
+}
+
+.nav-button:hover,
+.primary-button:hover {
+  background: var(--purple);
+  transform: translateY(-2px);
+}
+
+/* 04. HERO SECTION */
+.hero-section {
+  max-width: 1280px;
+  min-height: 570px;
+  margin: auto;
+  padding: 80px 30px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 60px;
+}
+
+.hero-content {
+  max-width: 540px;
+}
+
+.hero-label {
+  color: var(--purple);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+.hero-content h1 {
+  color: var(--dark);
+  font-size: clamp(42px, 5vw, 64px);
+  line-height: 1.1;
+  font-weight: 800;
+  margin-bottom: 22px;
+}
+
+.hero-content > p:not(.hero-label) {
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.8;
+  margin-bottom: 30px;
+  max-width: 500px;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* 05. ABOUT SECTION */
+.about-section {
+  background: var(--white);
+  padding: 85px 20px;
+  text-align: center;
+}
+
+.about-section h2 {
+  color: var(--dark);
+  font-size: clamp(28px, 4vw, 40px);
+  margin-bottom: 20px;
+}
+
+.about-section p {
+  max-width: 750px;
+  margin: auto;
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+/* 06. FEATURES SECTION */
+.features-section {
+  background: var(--primary-bg);
+  padding: 85px 20px;
+}
+
+.features-section h2 {
+  color: var(--dark);
+  text-align: center;
+  font-size: clamp(30px, 4vw, 40px);
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+.features-section .container > p {
+  max-width: 680px;
+  margin: 0 auto 45px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+}
+
+.feature-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+
+  transition: transform var(--transition),
+              box-shadow var(--transition);
+}
+
+.feature-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.10);
+}
+
+.feature-card img {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+}
+
+.feature-card h3 {
+  padding: 22px 22px 8px;
+  color: var(--dark);
+  font-size: 21px;
+  line-height: 1.4;
+}
+
+.feature-card p {
+  padding: 0 22px 25px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* 07. FOOTER */
+.site-footer {
+  background: var(--dark);
+  color: var(--white);
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.site-footer p {
+  font-size: 14px;
+  color: #D1D5DB;
+  margin: 5px 0;
+}
+
+/* 08. TABLET RESPONSIVE */
+@media (max-width: 991px) {
+
+  .navbar {
+    padding: 0 20px;
+  }
+
+  .nav-links {
+    gap: 18px;
+  }
+
+  .hero-section {
+    gap: 30px;
+    min-height: 480px;
+  }
+
+  .hero-image img {
+    height: 320px;
+  }
+
+  .features-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* 09. MOBILE RESPONSIVE */
+@media (max-width: 767px) {
+
+  .navbar {
+    min-height: 70px;
+    flex-wrap: wrap;
+    padding: 15px 20px;
+    gap: 15px;
+  }
+
+  .logo {
+    font-size: 21px;
+  }
+
+  .nav-links {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px 22px;
+  }
+
+  .nav-links a {
+    font-size: 14px;
+  }
+
+  .nav-button {
+    display: none;
+  }
+
+  .hero-section {
+    grid-template-columns: 1fr;
+    padding: 60px 20px;
+    gap: 35px;
+    text-align: center;
+  }
+
+  .hero-content {
+    margin: auto;
+  }
+
+  .hero-content > p:not(.hero-label) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-image img {
+    height: 260px;
+  }
+
+  .about-section,
+  .features-section {
+    padding: 60px 20px;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .feature-card img {
+    height: 220px;
+  }
+}
+
+/* 10. SMALL MOBILE */
+@media (max-width: 420px) {
+
+  .nav-links {
+    gap: 12px;
+  }
+
+  .nav-links a {
+    font-size: 13px;
+  }
+
+  .hero-content h1 {
+    font-size: 40px;
+  }
+
+  .hero-image img {
+    height: 220px;
+  }
+}
